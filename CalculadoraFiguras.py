@@ -12,6 +12,6 @@ if figura == Círculo:
  st.number_input("Radio")
 def area_circulo(radio):
   return math.pi * radio ** 2
-print(st.success(area_circulo)
+print(st.success(area_circulo))
 
 
