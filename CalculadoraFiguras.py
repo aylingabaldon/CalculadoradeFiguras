@@ -9,7 +9,7 @@ st.write("Figura: ", figura_seleccionada)
 
 if figura == "Círculo":
  print("Fórmula: ", st.latex("A=π * r²"))
- st.number_input("Radio")
+st.number_input("Radio")
  def area_circulo(radio):
    return math.pi * radio ** 2
  print(st.success(area_circulo))
