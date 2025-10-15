@@ -7,4 +7,4 @@ st.write("Figura: ", figura_seleccionada)
 
 def area_circulo(radio):
   return math.pi * radio ** 2
-st.number_input()
+st.number_input("Radio")
