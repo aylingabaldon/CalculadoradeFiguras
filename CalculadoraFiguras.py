@@ -9,7 +9,5 @@ def area_circulo(radio):
   return math.pi * radio ** 2
   radio = input("Ingresa el radio:")
   print(area_circulo(radio))
-if figura == circulo:
-  operacion= ["Área", "Perímetro"]
-  operacion_seleccionada = st.selectbox("Selecciona la operación", operacion)
+
   
