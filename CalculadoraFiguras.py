@@ -1,6 +1,8 @@
 import streamlit as st
 import math
 st.title("Calculadora de Figuras Geométricas 💠")
+st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
+st.sidebar.write("Matrícula: 313765")
 figura = ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
 figura_seleccionada = st.selectbox("Selecciona la figura", figura)
 st.write("Figura: ", figura_seleccionada)
