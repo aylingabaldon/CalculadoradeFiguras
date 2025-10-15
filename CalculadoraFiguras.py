@@ -12,4 +12,4 @@ st.latex("A=π * r²")
 def area_circulo(radio):
   return math.pi * radio ** 2
 st.number_input("Radio")
-st.success(area_circulo(radio))
+print(st.success(area_circulo(radio)))
