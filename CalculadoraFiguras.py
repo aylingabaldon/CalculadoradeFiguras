@@ -8,7 +8,7 @@ figura_seleccionada = st.selectbox("Selecciona la figura", figura)
 st.write("Figura: ", figura_seleccionada)
 
 if figura == "Círculo":
- print(st.latex("A=π * r²"))
+ print("Fórmula: " st.latex("A=π * r²"))
  st.number_input("Radio")
 def area_circulo(radio):
   return math.pi * radio ** 2
