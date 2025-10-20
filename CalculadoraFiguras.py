@@ -23,11 +23,13 @@ with tabs[0]:
 
     # Variables y cálculos según figura
     if figura == "Círculo":
-        r = st.number_input("Radio (r)", min_value=0.0, value=1.0)
+        r = st.number_input("Radio: ", min_value=0.0, value=1.0)
         area = np.pi * r**2
         perimetro = 2 * np.pi * r
         st.latex("Fórmula Área: π * r²")
+        st.metric("Área del Círculo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * π * r")
+        st.metric("Perímetro del Círculo: ", f"{perimetro:.2f}")
 
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=3.0)
