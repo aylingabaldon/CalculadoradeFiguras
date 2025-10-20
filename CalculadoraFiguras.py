@@ -135,7 +135,7 @@ if funciones == "Fórmula General":
     c = st.number_input("Variable c", min_value=0.0, value=1.0)
     x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
     X2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
-    st.latex("Fórmula General: ", (x=\frac{-b\pm \sqrt{b^{2}-4ac}}{2a}\)) 
+    st.latex("Fórmula General: ", (x=frac{-b\pm \sqrt{b^{2}-4ac}}{2a}\)) 
 
 
 
