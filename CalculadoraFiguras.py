@@ -9,10 +9,6 @@ st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
 st.sidebar.write("Matrícula: 313765")
 tabs = st.tabs(["Figuras Geométricas ❀", "Funciones Trigonométricas 〰️"])
 
-# -----------------------------------------------------
-# PARTE 1 y 2: FIGURAS GEOMÉTRICAS
-# -----------------------------------------------------
-
 with tabs[0]:
     st.header("Figuras Geométricas ❀")
     figura = st.selectbox(
@@ -51,14 +47,18 @@ with tabs[0]:
         st.metric("Área del Tríangulo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: a + b + c")
         st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
-
-        x = [a, b, 0]
-        y = [0, 0, c]
-        triangulo = plt.figure()
-        plt.plot(x, y, marker='o', color=color, fill=True)
-        plt.title("Gráfica del Triángulo")
-        plt.grid(True)
+        
+        x = [-base/2, base/2, 0]
+        y = [0, 0, altura]
+        triangle = plt.Polygon(list(zip(x, y)), edgecolor=color, fill=False)
+        ax.add_artist(triangle)
+        ax.set_xlim(-base, base)
+        ax.set_ylim(0, altura + 2)
+        ax.set_aspect('equal')
+        ax.axis('on')
         st.pyplot(fig)
+
+
         
     elif figura == "Rectángulo":
         b = st.number_input("Base: ", min_value=0.0, value=1.0)
