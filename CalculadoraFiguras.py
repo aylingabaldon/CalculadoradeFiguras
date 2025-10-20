@@ -15,35 +15,34 @@ with tabs[0]:
 
 if figura == "Círculo":
    r = st.number_input("Radio", min_value=0.0, value=1.0)
-   st.write("Fórmula Área: A=C * r²")
-   area = np.pi * r**2
-   st.write("Fórmula Perímetro: P=2*π*r")         
+   area = np.pi * r**2        
    perimetro = 2 * np.pi * r
-   
+   st.write("Fórmula Área: A=C * r²")
+   st.write("Fórmula Perímetro: P=2*π*r") 
 elif figura == "Triángulo":
    a = st.number_input("Lado a", min_value=0.0, value=1.0) 
    b = st.number_input("Lado b (Base)", min_value=0.0, value=1.0)
    c = st.number_input("Lado c", min_value=0.0, value=1.0)
    h = st.number_input("Altura: ", min_value=0.0, value=1.0)
-   st.write("Fórmula Área: (b * h)/2")
    area = (b * h) / 2
-   st.write("Fórmula Perímetro: a + b + c")
    perimetro = a + b + c
+   st.write("Fórmula Área: (b * h)/2")
+   st.write("Fórmula Perímetro: a + b + c")
 
 elif figura == "Rectángulo":
     b = st.number_input("Base: ", min_value=0.0, value=1.0)
     h = st.number_input("Altura: ", min_value=0.0, value=2.0)
-    st.write("Fórmula Área: b * h")
     area = b * h
-    st.write("Fórmula Perímetro: 2 * (b + h)")
     perimetro = 2 * (b + h)
+    st.write("Fórmula Área: b * h")
+    st.write("Fórmula Perímetro: 2 * (b + h)")
 
 elif figura == "Cuadrado":
     l = st.number_input("Lado: ", min_value=0.0, value=1.0)
-    st.write("Fórmula Área: L * L")
     area = l**2
-    st.write("Fórmula Perímetro: 4*L")
     perimetro = 4 * l
+    st.write("Fórmula Área: L * L")
+    st.write("Fórmula Perímetro: 4*L")
 
 st.success(f"Área = {area:.2f}")
 st.success(f"Perímetro = {perimetro:.2f}")
