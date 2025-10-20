@@ -35,9 +35,9 @@ with tabs[0]:
         circulo = plt.Circle((0, 0), radio, color=color, fill=True)
         ax.add_artist(circulo)
         ax.set_aspect('equal')
-        ax.set_xlim(-radio - 1, radio + 1)
-        ax.set_ylim(-radio - 1, radio + 1)
-        plt.title("Visualización del Círculo")
+        ax.set_xlim(radio, radio)
+        ax.set_ylim(radio, radio)
+        plt.title("Gráfica del Círculo")
         st.pyplot(fig)
 
     elif figura == "Triángulo":
