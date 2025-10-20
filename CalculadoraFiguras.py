@@ -105,22 +105,24 @@ with tabs[1]:
     st.header("Funciones Trigonométricas 〰️")
     funcion = st.selectbox("Selecciona la función:", ["Seno", "Coseno", "Tangente"])
     amplitud = st.slider("Amplitud", 0.1, 15, 1)
-    rango = st.slider("Rango", 0.1, 15, 1)
+    rango = st.slider("Rango", 0, 15, 1)
     x = np.linspace(0, rango * np.pi, 600)
 
     if funcion == "Seno":
-        y = amplitud * np.sin(amplitud * x)
+        y = np.sin(amplitud * x)
     elif funcion == "Coseno":
-        y = amplitud * np.cos(amplitud * x)
+        y = np.cos(amplitud * x)
     elif funcion == "Tangente":
-        y = amplitud * np.tan(amplitud * x)
+        y = np.tan(amplitud * x)
     
     fig_funTri, ax_funTri = plt.subplots()
     ax_funTri.plot(x, y, color=color)
     ax_funTri.set_title(f"Gráfica de la función: {funcion}")
     ax_funTri.grid(True)
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.legend()
     st.pyplot(fig_funcion)   
-
 
    
     
