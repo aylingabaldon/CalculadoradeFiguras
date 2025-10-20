@@ -27,6 +27,7 @@ with tabs[0]:
         area = np.pi * r**2
         perimetro = 2 * np.pi * r
         st.write("Fórmula Área: π * r²")
+        st.write("Fórmula Perímetro: 2 * π * r")
 
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=3.0)
