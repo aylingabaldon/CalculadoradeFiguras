@@ -117,41 +117,41 @@ with tabs[1]:
         y = amplitud * np.tan(frecuencia * x)
         y[np.abs(y) > 10] = np.nan
     
-    fig_funTri, ax_funTri = plt.subplots()
-    ax_funTri.plot(x, y, color=color)
-    ax_funTri.set_title(f"Gráfica de la función: {funcion}")
-    ax_funTri.grid(True)
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.legend()
-    st.pyplot(fig_funTri)   
+        fig_funTri, ax_funTri = plt.subplots()
+        ax_funTri.plot(x, y, color=color)
+        ax_funTri.set_title(f"Gráfica de la función: {funcion}")
+        ax_funTri.grid(True)
+        plt.xlabel("x")
+        plt.ylabel("y")
+        plt.legend()
+        st.pyplot(fig_funTri)  
     
 with tabs[2]:
     st.header("Otras Funciones 😎")
     funciones = st.selectbox("Selecciona la función:", ["Fórmula General", "Teorema de Pitágoras", "Conversión de Temperaturas"])
     
-if funciones == "Fórmula General":
-    a = st.number_input("Variable a", min_value=0.0, value=1.0)
-    b = st.number_input("Variable b", min_value=0.0, value=1.0)
-    c = st.number_input("Variable c", min_value=0.0, value=1.0)
-    x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
-    x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
-    st.metric("X1= ", f"{x1:.2f}")
-    st.metric("X2= ", f"{x2:.2f}")
+    if funciones == "Fórmula General":
+        a = st.number_input("Variable a", min_value=0.0, value=1.0)
+        b = st.number_input("Variable b", min_value=0.0, value=1.0)
+        c = st.number_input("Variable c", min_value=0.0, value=1.0)
+        x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
+        x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
+        st.metric("X1= ", f"{x1:.2f}")
+        st.metric("X2= ", f"{x2:.2f}")
     
-elif funciones == "Teorema de Pitágoras":
-    Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
-    Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
-    hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
-    st.metric("Hipotenusa: ", f"{hipotenusa:.2f}")
-    
-elif funciones == "Conversión de Temperaturas":
-    celsius = st.slider("Grados Celsius: ", -100, 100, 0)
-    conversion_a_farenheit = ((celsius * 9/5) + 32)
-    st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}")
-    farenheit = st.slider("Grados Farenheit: ", -100, 100, 0)
-    conversion_a_celsius = ((farenheit - 32) * 5/9)
-    st.metric("Conversión: ", f"{conversion_a_celsius:.2f}") 
+     elif funciones == "Teorema de Pitágoras":
+         Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
+         Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
+         hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
+         st.metric("Hipotenusa: ", f"{hipotenusa:.2f}")
+     
+     elif funciones == "Conversión de Temperaturas":
+         celsius = st.slider("Grados Celsius: ", -100, 100, 0)
+         conversion_a_farenheit = ((celsius * 9/5) + 32)
+         st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}")
+         farenheit = st.slider("Grados Farenheit: ", -100, 100, 0)
+         conversion_a_celsius = ((farenheit - 32) * 5/9)
+         st.metric("Conversión: ", f"{conversion_a_celsius:.2f}") 
    
 
 
