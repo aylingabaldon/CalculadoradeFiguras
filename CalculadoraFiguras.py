@@ -136,9 +136,21 @@ if funciones == "Fórmula General":
     c = st.number_input("Variable c", min_value=0.0, value=1.0)
     x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
     x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
-    st.image("\Users\aylin gabaldon\Pictures\ecuacion-de-segundo-grado_solucion.png", caption= "Fórmula General")
     st.metric("X1= ", f"{x1:.2f}")
     st.metric("X2= ", f"{x2:.2f}")
+elif funciones == "Función Gaussiana":
+    mu = st.slider("mu", -50, 50, 300)
+    sigma = st.slider("Sigma", -50, 50, 300)
+    x = np.linspace(-50, 50, 300)
+    y = np.exp(-(((x- mu)**2))/(2 * (sigma ** 2)))
+    st.metric("Resultado: ", f"{y:.2f}")
+    plt.plot(x, y, label="Función Gaussiana")
+    plt.title("Gráfica Gaussiana")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.legend()
+    plt.show()
+
     
 
 
