@@ -51,12 +51,13 @@ with tabs[0]:
         fig_t, ax_t = plt.subplots()
         x = [-b, b, 0]
         y = [0, 0, h]
-        triangle = plt.Polygon(list(zip(x, y)), color=color, fill=True)
-        ax_t.add_patch(triangle)
+        triangulo = plt.Polygon(list(zip(x, y)), color=color, fill=True)
+        ax_t.add_patch(triangulo)
         ax_t.set_xlim(-b, b)
         ax_t.set_ylim(0, h + 2)
         ax_t.set_aspect('equal')
         ax_t.axis('on')
+        plt.title("Gráfica del Triángulo")
         st.pyplot(fig_t)
 
 
@@ -78,6 +79,7 @@ with tabs[0]:
         ax_rec.set_ylim(-1, h + 1)
         ax_rec.set_aspect('equal')
         ax_rec.axis('on')
+        plt.title("Gráfica del Rectángulo")
         st.pyplot(fig_rec)
 
     elif figura == "Cuadrado":
@@ -96,6 +98,7 @@ with tabs[0]:
         ax_cuadro.set_ylim(-1, l + 1)
         ax_cuadro.set_aspect('equal')
         ax_cuadro.axis('on')
+        plt.title("Gráfica del Cuadrado")
         st.pyplot(fig_cuadro)
 
 # -----------------------------------------------------
