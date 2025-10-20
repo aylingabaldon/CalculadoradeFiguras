@@ -106,7 +106,7 @@ with tabs[1]:
     funcion = st.selectbox("Selecciona la función:", ["Seno", "Coseno", "Tangente"])
     frecuencia = st.slider("Frecuencia", 0.1, 15.0, 1.0)
     amplitud = st.slider("Amplitud", 0.1, 15.0, 1.0)
-    color = st.color_picker("Selecciona un color: ", "#10B4E0")
+    colorFT = st.color_picker("Selecciona un color: ", "#10B4E0") 
     x = np.linspace(0, 15, 600)
 
     if funcion == "Seno":
@@ -118,7 +118,7 @@ with tabs[1]:
         y[np.abs(y) > 10] = np.nan
     
     fig_funTri, ax_funTri = plt.subplots()
-    ax_funTri.plot(x, y, color=color)
+    ax_funTri.plot(x, y, color=colorFT)
     ax_funTri.set_title(f"Gráfica de la función: {funcion}")
     ax_funTri.grid(True)
     plt.xlabel("x")
