@@ -38,25 +38,31 @@ with tabs[0]:
         h = st.number_input("Altura (h)", min_value=0.0, value=4.0)
         area = 0.5 * b * h
         perimetro = a + b + c
-
+        st.latex("Fórmula Área: (b * h) / 2")
+        st.metric("Área del Tríangulo: ", f"{area:.2f}")
+        st.latex("Fórmula Perímetro: a + b + c")
+        st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
+        
     elif figura == "Rectángulo":
         b = st.number_input("Base (b)", min_value=0.0, value=4.0)
         h = st.number_input("Altura (h)", min_value=0.0, value=2.0)
         area = b * h
         perimetro = 2 * (b + h)
-
+        st.latex("Fórmula Área: b * h")
+        st.metric("Área del Rectángulo: ", f"{area:.2f}")
+        st.latex("Fórmula Perímetro: 2 * (b + h)")
+        st.metric("Perímetro del Rectángulo: ", f"{perimetro:.2f}")
        
 
     elif figura == "Cuadrado":
         l = st.number_input("Lado (l)", min_value=0.0, value=2.0)
         area = l**2
         perimetro = 4 * l
-
-       
-
-    # Mostrar resultados
-    st.success(f"Área = {area:.2f}")
-    st.success(f"Perímetro = {perimetro:.2f}")
+        st.latex("Fórmula Área: L * L")
+        st.metric("Área del Cuadrado: ", f"{area:.2f}")
+        st.latex("Fórmula Perímetro: 4 * L")
+        st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
+    
 
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
