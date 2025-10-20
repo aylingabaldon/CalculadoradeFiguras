@@ -54,7 +54,7 @@ with tabs[0]:
 
         x = [a, b, 0]
         y = [0, 0, c]
-       triangulo = plt.Triangle((x, y), color=color, fill=True)
+        triangulo = plt.Triangle((x, y), color=color, fill=True)
         plt.plot(x, y, marker='o')
         plt.title("Gráfica del Triángulo")
         plt.grid(True)
