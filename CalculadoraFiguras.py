@@ -138,11 +138,17 @@ if funciones == "Fórmula General":
     x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
     st.metric("X1= ", f"{x1:.2f}")
     st.metric("X2= ", f"{x2:.2f}")
+    
 elif funciones == "Teorema de Pitágoras":
     Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
     Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
     hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
-    st.metric("Hipotenusa: ", f"{hipotenusa:.2f}") 
+    st.metric("Hipotenusa: ", f"{hipotenusa:.2f}")
+    
+elif funciones == "Conversión de Temperaturas
+celsius = st.slider("Grados Celsius: ", -100, 100, 0)
+conversion_a_farenheit = ((celsius * 9/5) + 32)
+st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}") 
    
 
 
