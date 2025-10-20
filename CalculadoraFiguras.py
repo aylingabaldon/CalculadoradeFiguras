@@ -145,7 +145,7 @@ with tabs[2]:
         Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
         hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
         st.metric("Hipotenusa: ", f"{hipotenusa:.2f}")
-        st.image("https://e7.pngegg.com/pngimages/585/716/png-clipart-pythagorean-theorem-mathematics-hypotenuse-pythagorean-triple-mathematics-angle-text-thumbnail.png")
+        st.image("https://www.smartick.es/blog/wp-content/uploads/2024/02/teorema-de-Pitagoras-2-1024x825.png")
      
     elif funciones == "Conversión de Temperaturas":
           celsius = st.slider("Grados Celsius: ", -100, 100, 0)
