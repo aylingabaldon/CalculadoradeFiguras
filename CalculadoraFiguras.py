@@ -1,17 +1,22 @@
 import streamlit as st
-import math
+import numpy as np
+
 st.title("Calculadora de Figuras Geométricas 💠")
 st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
 st.sidebar.write("Matrícula: 313765")
+tabs = st.tabs("Figuras Geométricas ❀", "Funciones Trigonométricas 〰️")
+
 figura = ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
 figura_seleccionada = st.selectbox("Selecciona la figura", figura)
 st.write("Figura: ", figura_seleccionada)
 
 if figura == "Círculo":
- print("Fórmula: ", st.latex("A=π * r²"))
-st.number_input("Radio")
- def area_circulo(radio):
-   return math.pi * radio ** 2
- print(st.success(area_circulo))
+   print("Fórmula: ", st.latex("A=π * r²"))
+   r = st.number_input("Radio")
+   area = np.pi * r**2
+   print("Área: ", area)
+   perimetro = 2 * np.pi * r
+   print("Perímetro: ", perimtro)
+
 
 
