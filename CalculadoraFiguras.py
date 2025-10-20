@@ -89,6 +89,15 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
 
+        fig_cuadro, ax_cuadro = plt.subplots()
+        cuadrado = plt.Rectangle((0, 0), l, l, color=color, fill=True)
+        ax_cuadro.add_patch(cuadrado)
+        ax_cuadro.set_xlim(-1, l + 1)
+        ax_cuadro.set_ylim(-1, l + 1)
+        ax_cuadro.set_aspect('equal')
+        ax_cuadro.axis('on')
+        st.pyplot(fig_cuadro)
+
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
