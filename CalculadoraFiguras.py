@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib
+import matplotlib.pyplot as plt
 
 
 
@@ -67,10 +67,12 @@ with tabs[0]:
 fig, ax = plt.subplots()
 
 if figura == "Círculo":
-    circle = plt.Circle((0, 0), radio, color=color, fill=False)
-    ax.add_artist(circle)
-    ax.set_xlim(-radio - 1, radio + 1)
-    ax.set_ylim(-radio - 1, radio + 1)
+    circulo = patches.Circle((0, 0), radio, color=color, fill=False)
+    ax.add_patch(circulo)
+    ax.set_xlim(0, radio)
+    ax.set_ylim(0, radio)
+    ax.set_aspect("equal")
+    plt.show()
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
