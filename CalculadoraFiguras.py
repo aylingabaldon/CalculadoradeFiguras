@@ -55,8 +55,7 @@ with tabs[0]:
        st.write("Fórmula Perímetro: 4*L")
        print("Perímetro: ", perimetro)
 
-   st.success(f"Área = {area:.2f}")
-   st.success(f"Perímetro = {perimetro:.2f}")
+
 
    
     
