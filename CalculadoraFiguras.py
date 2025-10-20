@@ -22,16 +22,16 @@ with tabs[0]:
         print("Perímetro: ", perimetro)
    
     elif figura == "Triángulo":
-        a = st.number_input("Lado a", min_value=0.0, value=1.0)
-        b = st.number_input("Lado b (Base)", min_value=0.0, value=1.0)
-        c = st.number_input("Lado c", min_value=0.0, value=1.0)
-        h = st.number_input("Altura: ", min_value=0.0, value=1.0)
-        st.write("Fórmula Área: (b * h)/2")
-        area = (b * h) / 2
-        print("Área: ", area)
-        st.write("Fórmula Perímetro: a + b + c")
-        perimetro = a + b + c
-        print("Perímetro: ", perimetro)
+       a = st.number_input("Lado a", min_value=0.0, value=1.0)
+       b = st.number_input("Lado b (Base)", min_value=0.0, value=1.0)
+       c = st.number_input("Lado c", min_value=0.0, value=1.0)
+       h = st.number_input("Altura: ", min_value=0.0, value=1.0)
+       st.write("Fórmula Área: (b * h)/2")
+       area = (b * h) / 2
+       print("Área: ", area)
+       st.write("Fórmula Perímetro: a + b + c")
+       perimetro = a + b + c
+       print("Perímetro: ", perimetro)
    
  
     elif figura == "Rectángulo":
