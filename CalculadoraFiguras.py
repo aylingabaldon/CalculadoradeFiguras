@@ -26,7 +26,7 @@ with tabs[0]:
         r = st.number_input("Radio (r)", min_value=0.0, value=1.0)
         area = np.pi * r**2
         perimetro = 2 * np.pi * r
-        st.
+        
 
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=3.0)
