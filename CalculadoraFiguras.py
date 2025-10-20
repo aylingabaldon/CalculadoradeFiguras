@@ -135,8 +135,9 @@ if funciones == "Fórmula General":
     c = st.number_input("Variable c", min_value=0.0, value=1.0)
     x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
     X2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
-    st.latex("Fórmula General: ")
-    st.image(aylin gabaldon\Pictures\ecuacion-de-segundo-grado_solucion.png)
+    st.metric("X1= ", f"{x1:.2f}")
+    st.metric("X2= ", f"{x2:.2f}")
+    
 
 
 
