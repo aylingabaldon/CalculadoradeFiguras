@@ -23,9 +23,9 @@ with tabs[0]:
     color = st.color_picker("Selecciona un color: ", "#10B4E0")
 
     if figura == "Círculo":
-        r = st.number_input("Radio: ", min_value=0.0, value=1.0)
-        area = np.pi * r**2
-        perimetro = 2 * np.pi * r
+        radio = st.number_input("Radio: ", min_value=0.0, value=1.0)
+        area = np.pi * radio**2
+        perimetro = 2 * np.pi * radio
         st.latex("Fórmula Área: π * r²")
         st.metric("Área del Círculo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * π * r")
