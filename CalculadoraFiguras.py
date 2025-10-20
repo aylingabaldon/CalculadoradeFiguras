@@ -123,7 +123,7 @@ with tabs[1]:
     plt.xlabel("x")
     plt.ylabel("y")
     plt.legend()
-    st.pyplot(fig_funcion)   
+    st.pyplot(fig_funTri)   
 
    
     
