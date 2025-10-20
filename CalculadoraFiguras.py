@@ -70,7 +70,15 @@ with tabs[0]:
         st.metric("Área del Rectángulo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * (b + h)")
         st.metric("Perímetro del Rectángulo: ", f"{perimetro:.2f}")
-       
+        
+        fig_rec, ax_r = plt.subplots()
+        rec = plt.Rectangle((0, 0), b, h, color=color, fill=True)
+        ax_rec.add_patch(rec)
+        ax_rec.set_xlim(-1, b + 1)
+        ax_rec.set_ylim(-1, h + 1)
+        ax_rec.set_aspect('equal')
+        ax_rec.axis('on')
+        st.pyplot(fig_rec)
 
     elif figura == "Cuadrado":
         l = st.number_input("Lado: ", min_value=0.0, value=1.0)
