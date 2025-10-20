@@ -105,24 +105,24 @@ with tabs[0]:
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
 with tabs[1]:
-    st.header("Funciones trigonométricas")
-
-    # Selección de función
-    funcion = st.selectbox("Selecciona una función:", ["sin(x)", "cos(x)", "tan(x)"])
-    amp = st.slider("Amplitud", 0.1, 2.0, 1.0)
-    rango = st.slider("Rango (en múltiplos de π)", 1, 4, 2)
-
-    # Crear eje x
+    st.header("FFunciones Trigonométricas 〰️")
+    funcion = st.selectbox("Selecciona la función:", ["Seno", "Coseno", "Tangente"])
+    amplitud = st.slider("Amplitud", 0.1, 100, 1)
+    rango = st.slider("Rango (en múltiplos de π)", 1, 100, 1)
     x = np.linspace(0, rango * np.pi, 400)
 
-    # Evaluar función seleccionada
-    if funcion == "sin(x)":
-        y = amp * np.sin(x)
-    elif funcion == "cos(x)":
-        y = amp * np.cos(x)
-    else:
-        y = amp * np.tan(x)
-        y[np.abs(y) > 10] = np.nan  # limitar valores grandes
+    if funcion == "Seno":
+        y = amplitud * np.sin(x)
+    elif funcion == "Coseno":
+        y = amplitud * np.cos(x)
+    elif funcion == "Tangente:
+        y = amplitud * np.tan(x)
+    
+    fig_funTri, ax_funTri = plt.subplots()
+    ax_funTri.plot(x, y, color=color)
+    ax_funTri.set_title(f"Gráfica de la función: {funcion}")
+    ax_funTri.grid(True)
+    st.pyplot(fig_funcion)   
 
 
    
