@@ -54,11 +54,11 @@ with tabs[0]:
 
         x = [a, b, 0]
         y = [0, 0, c]
-        plt.figure()
+       triangulo = plt.Triangle((x, y), color=color, fill=True)
         plt.plot(x, y, marker='o')
-        plt.title("Triángulo con Matplotlib")
+        plt.title("Gráfica del Triángulo")
         plt.grid(True)
-        plt.show()
+        st.pyplot(fig)
         
     elif figura == "Rectángulo":
         b = st.number_input("Base: ", min_value=0.0, value=1.0)
