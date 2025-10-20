@@ -108,11 +108,11 @@ with tabs[1]:
     amplitud = st.slider("Amplitud", 0.1, 15.0, 1.0)
     x = np.linspace(0, 15, 600)
 
-    if opcion == "Seno":
+    if funcion == "Seno":
         y = amplitud * np.sin(frecuencia * x)
-    elif opcion == "Coseno":
+    elif funcion == "Coseno":
         y = amplitud * np.cos(frecuencia * x)
-    elif opcion == "Tangente":
+    elif funcion == "Tangente":
         y = amplitud * np.tan(frecuencia * x)
         y[np.abs(y) > 10] = np.nan
     
