@@ -139,7 +139,7 @@ with tabs[2]:
         st.metric("X1= ", f"{x1:.2f}")
         st.metric("X2= ", f"{x2:.2f}")
     
-      elif funciones == "Teorema de Pitágoras":
+      elif funciones == "Teorema de Pitágoras": 
           Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
           Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
           hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
