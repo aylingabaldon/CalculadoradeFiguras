@@ -125,7 +125,7 @@ with tabs[1]:
     plt.legend()
     st.pyplot(fig_funTri)   
     
-with tabs[3]:
+with tabs[2]:
     st.header("Otras Funciones 😎")
     funcion = st.selectbox("Selecciona la función:", ["Fórmula General", "Función Gaussiana"])
     
