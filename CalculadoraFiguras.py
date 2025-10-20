@@ -51,7 +51,7 @@ with tabs[0]:
         fig_t, ax_t = plt.subplots()
         x = [-b, b, 0]
         y = [0, 0, h]
-        triangle = plt.Polygon(list(zip(x, y)), edgecolor=color, fill=True)
+        triangle = plt.Polygon(list(zip(x, y)), color=color, fill=True)
         ax_t.add_patch(triangle)
         ax_t.set_xlim(-b, b)
         ax_t.set_ylim(0, h + 2)
