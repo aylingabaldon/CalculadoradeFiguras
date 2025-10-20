@@ -128,7 +128,7 @@ with tabs[1]:
     
 with tabs[2]:
     st.header("Otras Funciones 😎")
-    funciones = st.selectbox("Selecciona la función:", ["Fórmula General", "Función Gaussiana"])
+    funciones = st.selectbox("Selecciona la función:", ["Fórmula General", "Teorema de Pitágoras", "Conversión de Temperaturas"])
     
 if funciones == "Fórmula General":
     a = st.number_input("Variable a", min_value=0.0, value=1.0)
@@ -138,21 +138,12 @@ if funciones == "Fórmula General":
     x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
     st.metric("X1= ", f"{x1:.2f}")
     st.metric("X2= ", f"{x2:.2f}")
-elif funciones == "Función Gaussiana":
-    mu = st.slider("mu", -50, 50, 0)
-    sigma = st.slider("Sigma", -50, 50, 0)
-    x = np.linspace(-50, 50, 300)
-    gaussiana = np.exp(-(((x - mu)**2))/(2 * (sigma**2)))
-
-    fig_gaus, ax_gaus = plt.subplots()
-    ax_gaus.plot(x, y, color=color)
-    ax_gaus.set_title(f"Gráfica de la función Gaussiana")
-    ax_funTri.grid(True)
-    plt.xlabel("x")
-    plt.ylabel("y")
-    plt.legend()
-    st.pyplot(fig_gaus)   
-    plt.plot(x, y, label="Función Gaussiana")
+elif funciones == "Teorema de Pitágoras":
+    Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
+    Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
+    hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
+    st.metric("Hipotenusa: ", f"{hipotenusa:.2f}") 
+   
 
 
     
