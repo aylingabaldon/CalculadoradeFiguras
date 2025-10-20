@@ -48,12 +48,12 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: a + b + c")
         st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
         
-        x = [-base/2, base/2, 0]
-        y = [0, 0, altura]
-        triangle = plt.Polygon(list(zip(x, y)), edgecolor=color, fill=False)
+        x = [-b/2, b/2, 0]
+        y = [0, 0, h]
+        triangle = plt.Polygon(list(zip(x, y)), edgecolor=color, fill=True)
         ax.add_artist(triangle)
-        ax.set_xlim(-base, base)
-        ax.set_ylim(0, altura + 2)
+        ax.set_xlim(-b, b)
+        ax.set_ylim(0, h + 2)
         ax.set_aspect('equal')
         ax.axis('on')
         st.pyplot(fig)
