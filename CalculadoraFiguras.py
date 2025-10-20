@@ -18,7 +18,7 @@ with tabs[0]:
         "Selecciona la figura:",
         ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
     )
-    st.write("Figura: ", figura_seleccionada)
+    st.write("Figura: ", figura)
     color = st.color_picker("Selecciona un color: ", "#10B4E0")
 
     # Variables y cálculos según figura
