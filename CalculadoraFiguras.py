@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
 
 
 
@@ -135,6 +136,7 @@ if funciones == "Fórmula General":
     c = st.number_input("Variable c", min_value=0.0, value=1.0)
     x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
     x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
+    st.image("C:\Users\aylin gabaldon\Pictures\ecuacion-de-segundo-grado_solucion.png", caption= "Fórmula General")
     st.metric("X1= ", f"{x1:.2f}")
     st.metric("X2= ", f"{x2:.2f}")
     
