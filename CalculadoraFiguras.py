@@ -136,7 +136,7 @@ if funciones == "Fórmula General":
     x1 = ((-b)+(((b**2)-(4*a*c))**(1/2)))/(2*a)
     X2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
     st.latex("Fórmula General: ")
-    st.image(\Users\aylin gabaldon\Pictures\ecuacion-de-segundo-grado_solucion.png)
+    st.image(aylin gabaldon\Pictures\ecuacion-de-segundo-grado_solucion.png)
 
 
 
