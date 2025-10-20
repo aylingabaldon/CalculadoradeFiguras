@@ -143,12 +143,17 @@ elif funciones == "Función Gaussiana":
     sigma = st.slider("Sigma", -50, 50, 0)
     x = np.linspace(-50, 50, 300)
     gaussiana = np.exp(-(((x - mu)**2))/(2 * (sigma**2)))
-    plt.plot(x, y, label="Función Gaussiana")
-    plt.title("Gráfica Gaussiana")
+
+    fig_gaus, ax_gaus = plt.subplots()
+    ax_gaus.plot(x, y, color=color)
+    ax_gaus.set_title(f"Gráfica de la función Gaussiana")
+    ax_funTri.grid(True)
     plt.xlabel("x")
     plt.ylabel("y")
     plt.legend()
-    plt.show()
+    st.pyplot(fig_gaus)   
+    plt.plot(x, y, label="Función Gaussiana")
+
 
     
 
