@@ -64,9 +64,8 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
     
-   
+    fig, ax = plt.subplots()
     if figura == "Círculo":
-        fig, ax = plt.subplots()
         circle = plt.Circle((0, 0), radio, color=color, fill=True)
         ax.add_patch(circle)
         ax.set_xlim(radio, radio)
