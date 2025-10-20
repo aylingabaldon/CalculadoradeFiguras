@@ -37,7 +37,6 @@ with tabs[0]:
     ax.set_xlim(radio, radio)
     ax.set_ylim(radio, radio)
 
-
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=1.0)
         b = st.number_input("Lado b (base)", min_value=0.0, value=1.0)
