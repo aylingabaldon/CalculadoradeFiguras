@@ -101,22 +101,19 @@ with tabs[0]:
         plt.title("Gráfica del Cuadrado")
         st.pyplot(fig_cuadro)
 
-# -----------------------------------------------------
-# 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
-# -----------------------------------------------------
 with tabs[1]:
-    st.header("FFunciones Trigonométricas 〰️")
+    st.header("Funciones Trigonométricas 〰️")
     funcion = st.selectbox("Selecciona la función:", ["Seno", "Coseno", "Tangente"])
-    amplitud = st.slider("Amplitud", 0.1, 100, 1)
-    rango = st.slider("Rango (en múltiplos de π)", 1, 100, 1)
-    x = np.linspace(0, rango * np.pi, 400)
+    amplitud = st.slider("Amplitud", 0.1, 15, 1)
+    rango = st.slider("Rango", 0.1, 15, 1)
+    x = np.linspace(0, rango * np.pi, 600)
 
     if funcion == "Seno":
-        y = amplitud * np.sin(x)
+        y = amplitud * np.sin(amplitud * x)
     elif funcion == "Coseno":
-        y = amplitud * np.cos(x)
+        y = amplitud * np.cos(amplitud * x)
     elif funcion == "Tangente":
-        y = amplitud * np.tan(x)
+        y = amplitud * np.tan(amplitud * x)
     
     fig_funTri, ax_funTri = plt.subplots()
     ax_funTri.plot(x, y, color=color)
