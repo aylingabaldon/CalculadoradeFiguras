@@ -70,8 +70,8 @@ fig, ax = plt.subplots()
 if figura == "Círculo":
     circulo = patches.Circle((0, 0), r, color=color, fill=False)
     ax.add_patch(circulo)
-    ax.set_xlim(0, radio)
-    ax.set_ylim(0, radio)
+    ax.set_xlim(0, r)
+    ax.set_ylim(0, r)
     ax.set_aspect("equal")
     plt.show()
 # -----------------------------------------------------
