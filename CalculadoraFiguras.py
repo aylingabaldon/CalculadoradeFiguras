@@ -45,7 +45,7 @@ elif figura == "Cuadrado":
     st.latex("Fórmula Perímetro: 4*L")
     perimetro = 4 * l
 
-st.success(f"Área = {area:.2f})
+st.success(f"Área = {area:.2f}")
 st.success(f"Perímetro = {perimetro:.2f}) 
    
     
