@@ -9,7 +9,7 @@ st.title("Calculadora de Figuras Geométricas 💠")
 st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
 st.sidebar.write("Matrícula: 313765")
 st.sidebar.write("Materia: Programación")
-St.sidebar.write("Grupo: 3L")
+st.sidebar.write("Grupo: 3L")
 tabs = st.tabs(["Figuras Geométricas ❀", "Funciones Trigonométricas 〰️", "Otras Funciones 😎"])
 
 with tabs[0]:
