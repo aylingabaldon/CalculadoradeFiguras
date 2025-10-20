@@ -66,12 +66,12 @@ with tabs[0]:
 
      if figura == "Círculo":
          fig, ax = plt.subplots()
-         circulo = patches.Circle((0, 0), r, color=color, fill=False)
-         ax.add_patch(circulo)
-         ax.set_xlim(0, r)
-         ax.set_ylim(0, r)
-         ax.set_aspect("equal")
-         plt.show()
+        circulo = patches.Circle((0, 0), r, color=color, fill=False)
+        ax.add_patch(circulo)
+        ax.set_xlim(0, r)
+        ax.set_ylim(0, r)
+        ax.set_aspect("equal")
+        plt.show()
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
