@@ -138,6 +138,7 @@ with tabs[2]:
         x2 = ((-b)-(((b**2)-(4*a*c))**(1/2)))/(2*a)
         st.metric("X1= ", f"{x1:.2f}")
         st.metric("X2= ", f"{x2:.2f}")
+        st.image("https://dicciomat.com/wp-content/uploads/2024/09/la-formula-general.png")
     
     elif funciones == "Teorema de Pitágoras":
         Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
