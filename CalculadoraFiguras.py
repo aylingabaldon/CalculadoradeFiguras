@@ -64,14 +64,14 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
 
-     fig, ax = plt.subplots()
-     if figura == "Círculo":
-        circulo = patches.Circle((0, 0), r, color=color, fill=False)
-        ax.add_patch(circulo)
-        ax.set_xlim(0, r)
-        ax.set_ylim(0, r)
-        ax.set_aspect("equal")
-        plt.show()
+fig, ax = plt.subplots()
+if figura == "Círculo":
+    circulo = patches.Circle((0, 0), r, color=color, fill=False)
+    ax.add_patch(circulo)
+    ax.set_xlim(0, r)
+    ax.set_ylim(0, r)
+    ax.set_aspect("equal")
+    plt.show()
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
