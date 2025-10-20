@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib
+import matplotlib as plt
 
 
 
@@ -41,7 +41,7 @@ with tabs[0]:
         a = st.number_input("Lado a", min_value=0.0, value=1.0)
         b = st.number_input("Lado b (base)", min_value=0.0, value=1.0)
         c = st.number_input("Lado c", min_value=0.0, value=1.0)
-        h = st.number_input("Altura (h)", min_value=0.0, value=1.0)
+        h = st.number_input("Altura: ", min_value=0.0, value=1.0)
         area = 0.5 * b * h
         perimetro = a + b + c
         st.latex("Fórmula Área: (b * h) / 2")
@@ -50,8 +50,8 @@ with tabs[0]:
         st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
         
     elif figura == "Rectángulo":
-        b = st.number_input("Base (b)", min_value=0.0, value=1.0)
-        h = st.number_input("Altura (h)", min_value=0.0, value=1.0)
+        b = st.number_input("Base: ", min_value=0.0, value=1.0)
+        h = st.number_input("Altura: ", min_value=0.0, value=1.0)
         area = b * h
         perimetro = 2 * (b + h)
         st.latex("Fórmula Área: b * h")
@@ -61,7 +61,7 @@ with tabs[0]:
        
 
     elif figura == "Cuadrado":
-        l = st.number_input("Lado (l)", min_value=0.0, value=1.0)
+        l = st.number_input("Lado: ", min_value=0.0, value=1.0)
         area = l**2
         perimetro = 4 * l
         st.latex("Fórmula Área: L * L")
