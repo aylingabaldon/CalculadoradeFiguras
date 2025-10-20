@@ -150,7 +150,7 @@ with tabs[2]:
         st.image("https://www.smartick.es/blog/wp-content/uploads/2024/02/teorema-de-Pitagoras-2-1024x825.png")
      
     elif funciones == "Conversión de Temperaturas🌡️":
-        st.header("Conversión de Temperaturas🌡️")
+          st.header("Conversión de Temperaturas🌡️")
           celsius = st.slider("Grados Celsius: ", -100, 100, 0)
           conversion_a_farenheit = ((celsius * 9/5) + 32)
           st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}")
