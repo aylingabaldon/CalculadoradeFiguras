@@ -1,14 +1,17 @@
 import streamlit as st
 import numpy as np
 
-st.title("Calculadora de Figuras y Relaciones Trigonométricas 🤓")
-st.sidebar.write("Estefany Jarely Zenteno Vargas 368148")
-tabs = st.tabs(["📐 Figuras geométricas", "📊 Funciones trigonométricas"])
+st.title("Calculadora de Figuras Geométricas 💠")
+st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
+st.sidebar.write("Matrícula: 313765")
+tabs = st.tabs(["Figuras Geométricas ❀", "Funciones Trigonométricas 〰️"])
 
 with tabs[0]:
-    st.header("Cálculo de área y perímetro")
-    figura = st.selectbox("Selecciona una figura:", ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"])
-    color = st.color_picker("Elige un color para la figura:", "#1f77b4")
+    st.header("Figuras Geométricas ❀")
+    figura = ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
+    figura_seleccionada = st.selectbox("Selecciona la figura", figura)
+    st.write("Figura: ", figura_seleccionada)
+    color = st.color_picker("Selecciona un color: ", "#10B4E0")
 
     if figura == "Círculo":
         r = st.number_input("Radio: ", min_value=0.0, value=1.0)
@@ -56,20 +59,14 @@ with tabs[1]:
     else:
         y = amp * np.tan(x)
         y[np.abs(y) > 10] = np.nan  # limitar valores grandes
-import streamlit as st
-import numpy as np
 
-st.title("Calculadora de Figuras Geométricas 💠")
-st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
-st.sidebar.write("Matrícula: 313765")
-tabs = st.tabs(["Figuras Geométricas ❀", "Funciones Trigonométricas 〰️"])
 
 with tabs[0]:
-   st.header("Figuras Geométricas ❀")
-   figura = ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
-   figura_seleccionada = st.selectbox("Selecciona la figura", figura)
-   st.write("Figura: ", figura_seleccionada)
-   color = st.color_picker("Selecciona un color: ", "#10B4E0")
+   st.header
+   
+   
+   
+   
 
 if figura == "Círculo":
   r = st.number_input("Radio", min_value=0.0, value=1.0)
