@@ -65,7 +65,7 @@ with tabs[0]:
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
     
    
-    if figura == "C´riculo":
+    if figura == "Círculo":
         fig, ax = plt.subplots()
         circle = plt.Circle((0, 0), radio, color=color, fill=True)
         ax.add_patch(circle)
