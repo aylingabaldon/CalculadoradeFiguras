@@ -31,6 +31,7 @@ with tabs[0]:
         st.metric("Área del Círculo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * π * r")
         st.metric("Perímetro del Círculo: ", f"{perimetro:.2f}")
+    fig, ax = plt.subplots()
         circle = plt.Circle((0, 0), radio, color=color, fill=True)
         ax.add_patch(circle)
         ax.set_xlim(radio, radio)
