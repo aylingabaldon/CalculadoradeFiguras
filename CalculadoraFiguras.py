@@ -128,9 +128,9 @@ with tabs[1]:
     
 with tabs[2]:
     st.header("Otras Funciones 😎")
-    funciones = st.selectbox("Selecciona la función:", ["Fórmula General", "Teorema de Pitágoras", "Conversión de Temperaturas"])
+    funciones = st.selectbox("Selecciona la función:", ["Fórmula General🌳", "Teorema de Pitágoras📐", "Conversión de Temperaturas🌡️"])
     
-    if funciones == "Fórmula General":
+    if funciones == "Fórmula General🌳":
         a = st.number_input("Variable a", min_value=0.0, value=1.0)
         b = st.number_input("Variable b", min_value=0.0, value=1.0)
         c = st.number_input("Variable c", min_value=0.0, value=1.0)
@@ -140,14 +140,14 @@ with tabs[2]:
         st.metric("X2= ", f"{x2:.2f}")
         st.image("https://dicciomat.com/wp-content/uploads/2024/09/la-formula-general.png")
     
-    elif funciones == "Teorema de Pitágoras":
+    elif funciones == "Teorema de Pitágoras📐":
         Cateto1 = st.number_input("Cateto 1: ", min_value=0, value=1)
         Cateto2 = st.number_input("Cateto 2: ", min_value=0, value=1)
         hipotenusa = math.sqrt(Cateto1**2 + Cateto2**2)
         st.metric("Hipotenusa: ", f"{hipotenusa:.2f}")
         st.image("https://www.smartick.es/blog/wp-content/uploads/2024/02/teorema-de-Pitagoras-2-1024x825.png")
      
-    elif funciones == "Conversión de Temperaturas":
+    elif funciones == "Conversión de Temperaturas🌡️":
           celsius = st.slider("Grados Celsius: ", -100, 100, 0)
           conversion_a_farenheit = ((celsius * 9/5) + 32)
           st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}")
