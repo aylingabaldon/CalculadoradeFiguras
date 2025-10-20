@@ -115,7 +115,7 @@ with tabs[1]:
         y = amplitud * np.sin(x)
     elif funcion == "Coseno":
         y = amplitud * np.cos(x)
-    elif funcion == "Tangente:
+    elif funcion == "Tangente":
         y = amplitud * np.tan(x)
     
     fig_funTri, ax_funTri = plt.subplots()
