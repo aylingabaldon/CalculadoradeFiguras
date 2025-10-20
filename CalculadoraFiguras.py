@@ -50,8 +50,8 @@ with tabs[0]:
         
         x = [-b/2, b/2, 0]
         y = [0, 0, h]
-        triangle = plt.Polygon(list(zip(x, y)), color=color, fill=True)
-        ax.add_artist(triangle)
+        triangulo = plt.Polygon(list(zip(x, y)), color=color, fill=True)
+        ax.add_artist(triangulo)
         ax.set_xlim(-b, b)
         ax.set_ylim(0, h + 2)
         ax.set_aspect('equal')
