@@ -49,7 +49,7 @@ with tabs[0]:
         st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
         
         fig_t, ax_t = plt.subplots()
-        x = [-b/2, b/2, 0]
+        x = [-b, b, 0]
         y = [0, 0, h]
         triangle = plt.Polygon(list(zip(x, y)), edgecolor=color, fill=True)
         ax_t.add_patch(triangle)
