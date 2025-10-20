@@ -52,15 +52,13 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: a + b + c")
         st.metric("Perímetro del Triángulo: ", f"{perimetro:.2f}")
 
-        fig, ax = plt.subplots()
-        puntos = np.array([[0, 0], [base], [altura]])
-        triangulo = plt.Polygon(puntos, color=color, fill=True)
-        ax.add_patch(triangulo)
-        ax.set_aspect('equal')
-        ax.set_ylim(-1, altura + 1)
-        ax.set_xlim(-1, base + 1)
-        plt.title("Gráfica del Triángulo")
-        st.pyplot(fig)
+        x = [a, b, 0]
+        y = [0, 0, c]
+        plt.figure()
+        plt.plot(x, y, marker='o')
+        plt.title("Triángulo con Matplotlib")
+        plt.grid(True)
+        plt.show()
         
     elif figura == "Rectángulo":
         b = st.number_input("Base: ", min_value=0.0, value=1.0)
