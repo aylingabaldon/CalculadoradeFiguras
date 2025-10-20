@@ -71,7 +71,7 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 2 * (b + h)")
         st.metric("Perímetro del Rectángulo: ", f"{perimetro:.2f}")
         
-        fig_rec, ax_r = plt.subplots()
+        fig_rec, ax_rec = plt.subplots()
         rec = plt.Rectangle((0, 0), b, h, color=color, fill=True)
         ax_rec.add_patch(rec)
         ax_rec.set_xlim(-1, b + 1)
