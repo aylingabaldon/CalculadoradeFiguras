@@ -23,7 +23,6 @@ with tabs[0]:
     st.write("Figura: ", figura)
     color = st.color_picker("Selecciona un color: ", "#10B4E0")
 
-    # Variables y cálculos según figura
     if figura == "Círculo":
         r = st.number_input("Radio: ", min_value=0.0, value=1.0)
         area = np.pi * r**2
@@ -65,15 +64,15 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
     
-fig, ax = plt.subplots()
+     fig, ax = plt.subplots()
 
-if figura == "Círculo":
-    circulo = patches.Circle((0, 0), r, color=color, fill=False)
-    ax.add_patch(circulo)
-    ax.set_xlim(0, r)
-    ax.set_ylim(0, r)
-    ax.set_aspect("equal")
-    plt.show()
+     if figura == "Círculo":
+         circulo = patches.Circle((0, 0), r, color=color, fill=False)
+         ax.add_patch(circulo)
+         ax.set_xlim(0, r)
+         ax.set_ylim(0, r)
+         ax.set_aspect("equal")
+         plt.show()
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
