@@ -6,7 +6,7 @@ st.sidebar.write("Nombre: Aylín Yareli Gabaldón Yáñez")
 st.sidebar.write("Matrícula: 313765")
 tabs = st.tabs(["Figuras Geométricas ❀", "Funciones Trigonométricas 〰️"])
 
-with tab[0]:
+with tabs[0]:
    st.header("Figuras Geométricas ❀")
    figura = ["Círculo", "Triángulo", "Rectángulo", "Cuadrado"]
    figura_seleccionada = st.selectbox("Selecciona la figura", figura)
