@@ -31,11 +31,6 @@ with tabs[0]:
         st.metric("Área del Círculo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * π * r")
         st.metric("Perímetro del Círculo: ", f"{perimetro:.2f}")
-    fig, ax = plt.subplots()
-    circle = plt.Circle((0, 0), radio, color=color, fill=True)
-    ax.add_patch(circle)
-    ax.set_xlim(radio, radio)
-    ax.set_ylim(radio, radio)
 
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=1.0)
@@ -69,7 +64,12 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
     
-
+    fig, ax = plt.subplots()
+    if figura == "C´riculo":
+        circle = plt.Circle((0, 0), radio, color=color, fill=True)
+        ax.add_patch(circle)
+        ax.set_xlim(radio, radio)
+        ax.set_ylim(radio, radio)
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
