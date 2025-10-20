@@ -119,14 +119,14 @@ with tabs[1]:
         y = amplitud * np.tan(frecuencia * x)
         y[np.abs(y) > 10] = np.nan
     
-        fig_funTri, ax_funTri = plt.subplots()
-        ax_funTri.plot(x, y, color=color)
-        ax_funTri.set_title(f"Gráfica de la función: {funcion}")
-        ax_funTri.grid(True)
-        plt.xlabel("x")
-        plt.ylabel("y")
-        plt.legend()
-        st.pyplot(fig_funTri)  
+    fig_funTri, ax_funTri = plt.subplots()
+    ax_funTri.plot(x, y, color=color)
+    ax_funTri.set_title(f"Gráfica de la función: {funcion}")
+    ax_funTri.grid(True)
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.legend()
+    st.pyplot(fig_funTri)  
     
 with tabs[2]:
     st.header("Otras Funciones 😎")
