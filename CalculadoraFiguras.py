@@ -148,7 +148,10 @@ elif funciones == "Teorema de Pitágoras":
 elif funciones == "Conversión de Temperaturas":
     celsius = st.slider("Grados Celsius: ", -100, 100, 0)
     conversion_a_farenheit = ((celsius * 9/5) + 32)
-    st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}") 
+    st.metric("Conversión: ", f"{conversion_a_farenheit:.2f}")
+    farenheir = st.slider("Grados Farenheit: ", -100, 100, 0)
+    conversion_a_celsius = ((farenheit - 32) * 5/9)
+    st.metric("Conversión: ", f"{conversion_a_celsius:.2f}") 
    
 
 
