@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
 
 
 
@@ -31,6 +30,15 @@ with tabs[0]:
         st.metric("Área del Círculo: ", f"{area:.2f}")
         st.latex("Fórmula Perímetro: 2 * π * r")
         st.metric("Perímetro del Círculo: ", f"{perimetro:.2f}")
+
+        fig, ax = plt.subplots()
+        circulo = plt.Circle((0, 0), radio, color=color, fill=True)
+        ax.add_artist(circulo)
+        ax.set_aspect('equal')
+        ax.set_xlim(-radio - 1, radio + 1)
+        ax.set_ylim(-radio - 1, radio + 1)
+        plt.title("Visualización del Círculo")
+        st.pyplot(fig)
 
     elif figura == "Triángulo":
         a = st.number_input("Lado a", min_value=0.0, value=1.0)
@@ -64,14 +72,6 @@ with tabs[0]:
         st.latex("Fórmula Perímetro: 4 * L")
         st.metric("Perímetro del Cuadrado: ", f"{perimetro:.2f}")
 
-fig, ax = plt.subplots()
-if figura == "Círculo":
-    circulo = patches.Circle((0, 0), r, color=color, fill=False)
-    ax.add_patch(circulo)
-    ax.set_xlim(0, r)
-    ax.set_ylim(0, r)
-    ax.set_aspect("equal")
-    plt.show()
 # -----------------------------------------------------
 # 🟦 PARTE 3: FUNCIONES TRIGONOMÉTRICAS
 # -----------------------------------------------------
