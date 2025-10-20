@@ -12,7 +12,7 @@ with tabs[0]:
    st.write("Figura: ", figura_seleccionada)
    color = st.color_picker("Selecciona un color: ", "#10B4E0")
    
-    if figura == "Círculo":
+   if figura == "Círculo":
         r = st.number_input("Radio", min_value=0.0, value=1.0)
         st.write("Fórmula Área: A=C * r²")
         area = np.pi * r**2
